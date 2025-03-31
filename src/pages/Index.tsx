@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -6,7 +5,7 @@ import Hero from '@/components/Hero';
 import VehicleCard, { VehicleProps } from '@/components/VehicleCard';
 import LocationCard from '@/components/LocationCard';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 import { Car, MapPin, Phone, ThumbsUp, Award, Shield } from 'lucide-react';
 
 const Index = () => {
@@ -100,14 +99,13 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-neutral">Popular Vehicles</h2>
-              <Button 
-                as={Link} 
+              <LinkButton 
                 to="/vehicles" 
                 variant="outline" 
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
                 View All
-              </Button>
+              </LinkButton>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -123,14 +121,13 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-neutral">Popular Pickup Locations</h2>
-              <Button 
-                as={Link} 
+              <LinkButton 
                 to="/locations" 
                 variant="outline" 
                 className="border-primary text-primary hover:bg-primary hover:text-white"
               >
                 View All
-              </Button>
+              </LinkButton>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -182,23 +179,21 @@ const Index = () => {
               Experience the best car rental service in Nairobi with our premium vehicles and exceptional service.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                as={Link}
+              <LinkButton
                 to="/booking"
                 className="bg-primary hover:bg-primary-dark text-white px-8"
                 size="lg"
               >
                 Book Now
-              </Button>
-              <Button
-                as={Link}
+              </LinkButton>
+              <LinkButton
                 to="/contact"
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-white px-8"
                 size="lg"
               >
                 Contact Us
-              </Button>
+              </LinkButton>
             </div>
           </div>
         </section>

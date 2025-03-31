@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 import { Calendar, MapPin, Car } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -53,35 +54,32 @@ const Hero = () => {
                 />
               </div>
               
-              <Button 
-                as={Link}
+              <LinkButton 
                 to="/booking"
                 className="bg-primary hover:bg-primary-dark text-white py-3"
               >
                 <Car className="mr-2" size={20} />
                 <span>Find Cars</span>
-              </Button>
+              </LinkButton>
             </div>
           </div>
           
           <div className="flex flex-wrap gap-4">
-            <Button
-              as={Link}
+            <LinkButton
               to="/booking"
               className="bg-primary hover:bg-primary-dark text-white"
               size="lg"
             >
               Book Now
-            </Button>
-            <Button
-              as={Link}
+            </LinkButton>
+            <LinkButton
               to="/vehicles"
               variant="outline"
               className="border-white text-white hover:bg-white/10"
               size="lg"
             >
               View Vehicles
-            </Button>
+            </LinkButton>
           </div>
         </div>
       </div>
